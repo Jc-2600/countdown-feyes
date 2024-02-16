@@ -1,0 +1,24 @@
+/* Estilos personalizados (opcional) */
+body {
+    background-color: #0f0f0f;
+    color: #ffffff;
+}
+#titulo{
+    font-size: 3rem;
+}
+#countdown{
+    font-size: 5rem;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.row{
+    width: 100%;
+}
+input,
+button {
+    margin-top: 20px;
+}

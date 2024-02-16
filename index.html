@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador Feyes</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <img src="/CountDown/logo-feyes.png" alt="logo" width="80px">
+        </div>
+        <h2 id="titulo">Título del Contador</h2>
+        <div id="countdown" class="display-4"></div>
+        <input type="text" id="tituloInput" class="form-control" placeholder="Nuevo título">
+        <div class="row">
+            <div class="col">
+                <input type="number" id="minutosInput" class="form-control" placeholder="Minutos">
+            </div>
+            <div class="col">
+                <input type="number" id="segundosInput" class="form-control" placeholder="Segundos">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-primary" onclick="actualizarContador()"><i class="bi bi-play"></i>Iniciar</button>
+            </div>
+            <div class="col">
+                <button class="btn btn-danger" onclick="borrarContador()"><i class="bi bi-trash"></i> Borrar</button>
+            </div>
+            <div class="col">
+                <button class="btn btn-warning" onclick="reiniciarContador()"><i class="bi bi-bootstrap-reboot"></i> Reiniciar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
