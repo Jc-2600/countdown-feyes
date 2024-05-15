@@ -9,11 +9,12 @@ function actualizarContador() {
 
   const titulo = document.getElementById("tituloInput").value;
   const minutos = parseInt(document.getElementById("minutosInput").value) || 0;
-  const segundos = parseInt(document.getElementById("segundosInput").value) || 0;
+  const segundos =
+    parseInt(document.getElementById("segundosInput").value) || 0;
   const countdownElement = document.getElementById("countdown");
   const tituloElement = document.getElementById("titulo");
   countdownElement.classList.remove("finalizado");
-  
+
   if (titulo) {
     tituloElement.innerText = titulo;
   }
@@ -28,7 +29,7 @@ function actualizarContador() {
 
     if (tiempoTotal <= 0) {
       clearInterval(intervalo);
-      countdownElement.classList.add("finalizado")
+      countdownElement.classList.add("finalizado");
       countdownElement.innerHTML = "TIEMPO FINALIZADO";
     }
 
@@ -36,12 +37,11 @@ function actualizarContador() {
   }, 1000);
 }
 
-
-function predica(){
+function iniciarServicio() {
   clearInterval(intervalo); // Limpia el intervalo existente antes de empezar uno nuevo
 
-  const titulo = "Prédica";
-  const minutos = 40;
+  const titulo = "Alabanza";
+  const minutos = 20;
   const segundos = 0;
   const countdownElement = document.getElementById("countdown");
   const tituloElement = document.getElementById("titulo");
@@ -49,7 +49,33 @@ function predica(){
   tituloElement.innerHTML = titulo;
   countdownElement.classList.remove("finalizado");
 
+  let tiempoTotal = minutos * 60 + segundos;
 
+  intervalo = setInterval(() => {
+    const minutosActual = Math.floor(tiempoTotal / 60);
+    const segundosActual = tiempoTotal % 60;
+
+    countdownElement.innerHTML = `${minutosActual}m ${segundosActual}s`;
+
+    if (tiempoTotal <= 0) {
+      ofrenda();
+    }
+
+    tiempoTotal--;
+  }, 1000);
+}
+
+function predica() {
+  clearInterval(intervalo); // Limpia el intervalo existente antes de empezar uno nuevo
+
+  const titulo = "Prédica";
+  const minutos = 30;
+  const segundos = 0;
+  const countdownElement = document.getElementById("countdown");
+  const tituloElement = document.getElementById("titulo");
+
+  tituloElement.innerHTML = titulo;
+  countdownElement.classList.remove("finalizado");
 
   let tiempoTotal = minutos * 60 + segundos;
 
@@ -73,7 +99,7 @@ function alabanza() {
   clearInterval(intervalo); // Limpia el intervalo existente antes de empezar uno nuevo
 
   const titulo = "Alabanza";
-  const minutos = 35;
+  const minutos = 20;
   const segundos = 0;
   const countdownElement = document.getElementById("countdown");
   const tituloElement = document.getElementById("titulo");
@@ -103,7 +129,7 @@ function ofrenda() {
   clearInterval(intervalo); // Limpia el intervalo existente antes de empezar uno nuevo
 
   const titulo = "Ofrenda";
-  const minutos = 10;
+  const minutos = 5;
   const segundos = 0;
   const countdownElement = document.getElementById("countdown");
   const tituloElement = document.getElementById("titulo");
@@ -120,9 +146,7 @@ function ofrenda() {
     countdownElement.innerHTML = `${minutosActual}m ${segundosActual}s`;
 
     if (tiempoTotal <= 0) {
-      clearInterval(intervalo);
-      countdownElement.classList.add("finalizado");
-      countdownElement.innerHTML = "TIEMPO FINALIZADO";
+      predica();
     }
 
     tiempoTotal--;

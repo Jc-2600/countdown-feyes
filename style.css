@@ -5,6 +5,7 @@ body {
 }
 #titulo{
     font-size: 3rem;
+    text-align: center;
 }
 #countdown{
     font-size: 5rem;
@@ -21,4 +22,9 @@ body {
 input,
 button {
     margin-top: 20px;
+}
+
+.finalizado{
+    color: cadetblue;
+    font-size: 2rem!important;
 }
