@@ -7,7 +7,8 @@
     <title>CountDown Feyes</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css"
+        rel="stylesheet">
     <link rel="icon" href="Favicon.png" type="image/x-icon">
 </head>
 
@@ -20,6 +21,9 @@
         <h2 id="titulo">Título del Contador</h2>
         <div id="countdown" class="display-4"></div>
         <div class="row align-items-center">
+            <div class="col d-flex justify-content-center">
+                <button class="btn btn-info" onclick="iniciarServicio()"><i class="bi bi-clock-fill"></i> Iniciar</button>
+            </div>
             <div class="col d-flex justify-content-center">
                 <button class="btn btn-light" onclick="alabanza()">Alabanza</button>
             </div>
@@ -43,18 +47,20 @@
         </div>
         <div class="row">
             <div class="col d-flex justify-content-center">
-                <button class="btn btn-primary" onclick="actualizarContador()"><i class="bi bi-play"></i>Iniciar</button>
+                <button class="btn btn-primary" onclick="actualizarContador()"><i
+                        class="bi bi-play"></i>Iniciar</button>
             </div>
             <div class="col d-flex justify-content-center">
                 <button class="btn btn-danger" onclick="borrarContador()"><i class="bi bi-trash"></i> Borrar</button>
             </div>
             <div class="col d-flex justify-content-center">
-                <button class="btn btn-warning" onclick="reiniciarContador()"><i class="bi bi-bootstrap-reboot"></i> Reiniciar</button>
+                <button class="btn btn-warning" onclick="reiniciarContador()"><i class="bi bi-bootstrap-reboot"></i>
+                    Reiniciar</button>
             </div>
         </div>
     </div>
 
-    <script src="app.js"></script>
+    <script src="app-autoD.js"></script>
 </body>
 
 </html>

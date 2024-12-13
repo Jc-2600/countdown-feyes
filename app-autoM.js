@@ -128,8 +128,8 @@ function alabanza() {
 function ofrenda() {
   clearInterval(intervalo); // Limpia el intervalo existente antes de empezar uno nuevo
 
-  const titulo = "Ofrenda";
-  const minutos = 5;
+  const titulo = "Ofrenda y anuncios";
+  const minutos = 10;
   const segundos = 0;
   const countdownElement = document.getElementById("countdown");
   const tituloElement = document.getElementById("titulo");
